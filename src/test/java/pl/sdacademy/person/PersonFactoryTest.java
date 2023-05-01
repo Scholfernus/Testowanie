@@ -1,5 +1,5 @@
-package pl.sdacademy.Person;
-
+package pl.sdacademy.person;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -47,5 +47,11 @@ class PersonFactoryTest {
                 () -> assertEquals(firstName, actualPerson.getFirsName()),
                 () -> assertEquals(lastName, actualPerson.getLastName())
         );
+        //Wykorzystanie biblioteki assertJ
+        org.assertj.core.api.Assertions.assertThat(actualPerson)
+                .isNotNull()
+                .extracting((p->p.getPrefix()))
+                .isNotNull()
+                .isEqualTo("Mr");
     }
 }

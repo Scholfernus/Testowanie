@@ -1,4 +1,4 @@
-package pl.sdacademy.Person;
+package pl.sdacademy.person;
 
 import lombok.*;
 

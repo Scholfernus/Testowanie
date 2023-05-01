@@ -1,10 +1,22 @@
 package pl.sdacademy.calculations.Validator;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class NameVerifierTest {
+    private NameVerifier nameVerifier;
+    @BeforeAll
+    static  void beforeAll(){
+        System.out.println("In before ...");
+    }
+    @BeforeEach
+        void beforeEach() {
+        this.nameVerifier = new NameVerifier();
+    }
+
     @Test
     void shouldValidateName() {
         //given
